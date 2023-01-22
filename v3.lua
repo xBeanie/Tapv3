@@ -7,8 +7,8 @@ local ConfigLoad = Signal.new("ConfigLoad")
 local txt = game:GetService("TextService")      
 local TweenService = game:GetService("TweenService")      
 function library:Tween(...) TweenService:Create(...):Play() end      
-local cfglocation = "ovacfg/"      
-makefolder("ovacfg")      
+local cfglocation = "tapcfg/"      
+makefolder("tapcfg")      
 
 
 -- caching      
@@ -4561,18 +4561,18 @@ for i,v in ipairs(AllWeapons) do
 	end      
 end      
 
-makefolder("ovalua")      
+makefolder("taplua")      
 
 local allluas = {}      
 
-for _,lua in pairs(listfiles("ovalua")) do      
-	local luaname = GSUB(lua, "ovalua\\", "")      
+for _,lua in pairs(listfiles("taplua")) do      
+	local luaname = GSUB(lua, "taplua\\", "")      
 	INSERT(allluas, luaname)      
 end      
 
 RunService.RenderStepped:Wait()      
 
-local gui = library:New("Ova.rocks")      
+local gui = library:New("Tappinware")      
 local legit = gui:Tab("legit")      
 local rage = gui:Tab("rage")      
 local visuals = gui:Tab("visuals")      
